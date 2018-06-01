@@ -1,39 +1,30 @@
 <?php
 $servername = "localhost";
-$username = "username";
+$username = "root";
 $password = "000000";
-$dbname = "myDBPDO";
+$dbname = "db_camagru";
 
 try {
-    $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
-    // set the PDO error mode to exception
-    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    $dbh = new PDO("mysql:host=$servername", $username, $password);
+	$dbh->exec("CREATE DATABASE IF not EXISTS `$dbname`");
+	$dbh = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
+	$dbh->exec(
+		"CREATE TABLE IF not EXISTS users (
+			`id` INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
+			`login` VARCHAR(8) DEFAULT 'unknown' NOT NULL,
+			`firstname` VARCHAR(100) DEFAULT 'unknown' NOT NULL,
+			`lastname` VARCHAR(100) DEFAULT 'unknown' NOT NULL,
+			`email` VARCHAR(100) DEFAULT 'unknown' NOT NULL,
+			`password` VARCHAR(256) NOT NULL,
+			`creation_date` DATE, NOT NULL);
+		CREATE TABLE IF not EXISTS photos (
+			`id` INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
+			`creation_date` DATE NOT NULL,
+			`user_photo` VARCHAR(8) NOT NULL
+		)");
 
-    // prepare sql and bind parameters
-    $stmt = $conn->prepare("INSERT INTO MyGuests (firstname, lastname, email)
-    VALUES (:firstname, :lastname, :email)");
-    $stmt->bindParam(':firstname', $firstname);
-    $stmt->bindParam(':lastname', $lastname);
-    $stmt->bindParam(':email', $email);
-
-    // insert a row
-    $firstname = "John";
-    $lastname = "Doe";
-    $email = "john@example.com";
-    $stmt->execute();
-
-    // insert another row
-    $firstname = "Mary";
-    $lastname = "Moe";
-    $email = "mary@example.com";
-    $stmt->execute();
-
-    // insert another row
-    $firstname = "Julie";
-    $lastname = "Dooley";
-    $email = "julie@example.com";
-    $stmt->execute();
-
+    $stmt = $dbh->exec("INSERT INTO users (`firstname`, `lastname`, `email`, `login`, `password`, `creation_date`)
+    VALUES ('toto', 'titi', 'tata', 'tutu', 'dsfsadfasdf', '2010-02-06 19:30:13')");
     echo "New records created successfully";
     }
 catch(PDOException $e)

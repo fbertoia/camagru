@@ -10,5 +10,6 @@ echo '
     <link href="https://fonts.googleapis.com/css?family=Nanum+Pen+Script|Sacramento" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/styles.css">
     <link rel="stylesheet" type="text/css" href="css/ionicons.min.css">
+	<link rel="stylesheet" type="text/javascript" href="js/index.js">
 </head>';
 ?>
