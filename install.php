@@ -1,8 +1,5 @@
 <?php
-$servername = "localhost";
-$username = "root";
-$password = "000000";
-$dbname = "db_camagru";
+include 'db/db_settings.php';
 
 try {
     $dbh = new PDO("mysql:host=$servername", $username, $password);
@@ -17,6 +14,7 @@ try {
 			`email` VARCHAR(100) DEFAULT 'unknown' NOT NULL,
 			`password` VARCHAR(256) NOT NULL,
 			`creation_date` DATE, NOT NULL);
+			`creation_date` VARCHAR(10), NOT NULL);
 		CREATE TABLE IF not EXISTS photos (
 			`id` INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
 			`creation_date` DATE NOT NULL,
