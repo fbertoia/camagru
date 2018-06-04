@@ -22,17 +22,17 @@ if (!session_start())
 	<div class="modal-display">
 		<form class="modal-display-box modal-connect" action="#" method="post">
 			<div class="modal-group ">
-			    <input type="text" class="name-connect" class="name-connect" required="required"/>
+			    <input type="text" class="login-connect" class="name-connect" required="required"/>
 			    <label for="login">Identifiant</label>
             </div>
             <div class="modal-group">
-			    <input type="password" class="surname-connect" required="required"/>
+			    <input type="password" class="password-connect" required="required"/>
 			    <label for="password">Mot de Passe</label>
             </div>
 			<div class="modal--wrong-input"></div>
             <button name="button">Se connecter</button>
 		</form>
-		<form class="modal-display-box modal-register" method="post">
+		<form class="modal-display-box modal-register" action="#" target="_blank" method="post">
 				<div class="modal-group">
 				    <input type="text" class="name-register" required="required" value="yes"/>
 				    <label for="login">Nom</label>
@@ -46,15 +46,15 @@ if (!session_start())
 					<label for="password">Identifiant</label>
 				</div>
 	            <div class="modal-group">
-	                <input type="text" class="email-register" required="required" value="yes"/>
+	                <input type="text" class="email-register" required="required" value="frederic.bertoia@gmail.com"/>
 	                <label for="password">Email</label>
 	            </div>
 	            <div class="modal-group">
-				    <input type="password" class="password-register" required="required" value="yes"/>
+				    <input type="password" class="password-register" required="required" value="0000000000"/>
 				    <label for="password">Mot de passe</label>
 	            </div>
 	            <div class="modal-group">
-				    <input type="password" class="password2-register" required="required" value="yes"/>
+				    <input type="password" class="password2-register" required="required" value="0000000000"/>
 				    <label for="password">Mot de passe (verification)</label>
 	            </div>
 	            <div class="modal--wrong-input"></div>

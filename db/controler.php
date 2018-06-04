@@ -1,5 +1,8 @@
 <?php
 
+if (!session_start())
+	die();
+
 /*To add user : add_user */
 /*To connect  : connect  */
 
