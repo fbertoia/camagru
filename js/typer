@@ -1,0 +1,5 @@
+<h1>Typer.js is
+<span class="typer" id="main" data-words="great,fun,lightweight,easy" data-colors="white" data-delay="100" data-deleteDelay="1000"></span>
+<span class="cursor" data-owner="main"></span>
+</h1>
+<p>the typing effect with a pure HTML interface</p>
