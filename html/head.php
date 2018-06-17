@@ -11,5 +11,6 @@ echo '
     <link rel="stylesheet" type="text/css" href="css/styles.css">
     <link rel="stylesheet" type="text/css" href="css/ionicons.min.css">
 	<link rel="stylesheet" type="text/javascript" href="js/index.js">
+	<link rel="stylesheet" type="text/javascript" href="js/waves.js">
 </head>';
 ?>

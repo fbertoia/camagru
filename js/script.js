@@ -1,18 +1,17 @@
 $(document).ready(function() {
-	$('.modal-register').submit(function(){
+	$('.modal-register').submit(function() {
 		var name = $('.name-register').val();
 		var surname = $('.surname-register').val();
 		var login = $('.login-register').val();
 		var email = $('.email-register').val();
 		var password = $('.password-register').val();
 		var password2 = $('.password2-register').val();
-		let ret;
 		if (password === password2)
 		{
 			ret = $.ajax({
 				type: 'POST',
 				url: 'db/controler.php',
-				async: false,
+				async: true,
 				data: {request:"add_user", surname, name, login,email, password},
 				success: function(data)
 				{
@@ -29,8 +28,25 @@ $(document).ready(function() {
 			$(".password-register").val('');
 			$(".password2-register").val('');
 		}
+		return (false);
 	});
 	$('.modal-connect').submit(function(){
+		var login = $('.login-connect').val();
+		var password = $('.password-connect').val();
+		ret = $.ajax({
+			type:'POST',
+			url:'db/controler.php',
+			async: true,
+			data:{request: "login", login, password},
+			success: function(data)
+			{
+				if (data === "SUCCESS")
+					window.location = "main_page.php";
+				else {
+					$(".modal--wrong-input").text(data);
+				}
+			}
+		});
 		return false;
 	});
 });

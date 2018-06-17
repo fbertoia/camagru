@@ -15,7 +15,7 @@ function login($dbh) {
 		if ($row->password === $check_password)
 		{
 			$_SESSION['logged'] = TRUE;
-			$_SESSION['login'] = $login;
+			$_SESSION['login'] = $_POST['login'];
 			return ("SUCCESS");
 		}
 	}
