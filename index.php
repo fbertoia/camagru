@@ -1,6 +1,8 @@
 <?php
 if (!session_start())
 	die();
+if (isset($_SESSION['logged']) && $_SESSION['logged'] === TRUE)
+	header('Location:'."/main_page.php?login=".urlencode($_SESSION['login']));
 ?>
 
 <!DOCTYPE html>
@@ -20,13 +22,13 @@ if (!session_start())
 <body>
 	<div class="backdrop"></div>
 	<div class="modal-display">
-		<form class="modal-display-box modal-connect" action="#" method="post">
+		<form class="modal-display-box modal-connect" id="connect" action="#" method="post">
 			<div class="modal-group ">
-			    <input type="text" class="login-connect" class="name-connect" required="required"/>
+			    <input type="text" class="login-connect" class="name-connect" required="required" value="yes"/>
 			    <label for="login">Identifiant</label>
             </div>
             <div class="modal-group">
-			    <input type="password" class="password-connect" required="required"/>
+			    <input type="password" class="password-connect" required="required" value="0000000000"/>
 			    <label for="password">Mot de Passe</label>
             </div>
 			<div class="modal--wrong-input"></div>

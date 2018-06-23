@@ -7,7 +7,6 @@ function redirect($url){
 	  header('Location: ' . $url);
 	  die();
 	}
-	print_r($_SESSION);
 }
 
 if (session_start() === FALSE)
@@ -19,6 +18,4 @@ if (!isset($_SESSION) || !isset($_SESSION['logged'])
 {
 	redirect("http://localhost:8080/");
 }
-print_r($_SESSION);
-
 ?>

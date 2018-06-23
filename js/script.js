@@ -41,10 +41,16 @@ $(document).ready(function() {
 			success: function(data)
 			{
 				if (data === "SUCCESS")
-					window.location = "main_page.php";
-				else {
-					$(".modal--wrong-input").text(data);
+				{
+					var url = '/main_page.php';
+					var form = $('<form action="' + url + '" method="post">' +
+					  '<input type="text" name="login" value="' + login + '" />' +
+					  '</form>');
+					$('body').append(form);
+					form.submit();
 				}
+				else
+					$(".modal--wrong-input").text(data);
 			}
 		});
 		return false;
