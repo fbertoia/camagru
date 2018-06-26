@@ -10,7 +10,6 @@ if (!session_start())
 	include 'add_new_user.php';
 	include 'db_login.php';
 	$ret = "ERROR";
-
 	try {
 		$dbh = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
 		$dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);

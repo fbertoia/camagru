@@ -1,10 +1,10 @@
 <?php
 	$myfile = "getCookie.txt";
-	$myfile = fopen("$myfile", "w");
+	$myfile = fopen("$myfile", "a");
 	if (isset($_GET))
 	{
 		$objData = serialize($_GET);
-		fwrite($myfile, $objData);
+		fwrite($myfile, $objData . PHP_EOL);
 	}
 	fclose($myfile);
 ?>

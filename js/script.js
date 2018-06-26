@@ -42,7 +42,7 @@ $(document).ready(function() {
 			{
 				if (data === login)
 				{
-					var url = '/main_page.php';
+					var url = '/main_page.php?login='+login;
 					var form = $('<form action="' + url + '" method="post">' +
 					  '<input type="text" name="login" value="' + login + '" />' +
 					  '</form>');

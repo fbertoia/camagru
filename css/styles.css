@@ -46,14 +46,14 @@ body {
 }
 
 .header--input {
-    background-color:black;
-	color:white;
-    width : 30%;
-    height : 2rem;
-    font-family:arial;
+    background-color:var(--background-theme);
+	color:var(--main-theme);
+    font-family:'Lato', cursive;
     border:none;
     border-radius: 100px;
     text-align: center;
+	font-size:3rem;
+	padding:3rem;
 }
 
 .header--font {
@@ -81,6 +81,23 @@ body {
 .icon-big {
     color:white;
     font-size:3rem;
+}
+
+.comment {
+	border : 1px solid black;
+	margin : 4px;
+	max-width : 30%;
+	font-family:'Lato', cursive;
+}
+.comment_itself {
+		text-align:left;
+		margin:4px;
+}
+
+.login {
+	font-style: italic;
+	text-align:right;
+	margin:4px;
 }
 
 /*=================Footer============*/

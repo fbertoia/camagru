@@ -23,7 +23,11 @@ try {
 		CREATE TABLE IF not EXISTS photos (
 			`id` INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
 			`creation_date` DATE NOT NULL,
-			`user_photo` VARCHAR(8) NOT NULL)");
+			`user_photo` VARCHAR(8) NOT NULL);
+		CREATE TABLE IF not EXISTS comments (
+			`id` INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
+			`comment` VARCHAR(300) NOT NULL,
+			`login` VARCHAR(300) NOT NULL)");
 
     // $stmt = $dbh->exec("INSERT INTO users (`firstname`, `lastname`, `email`, `login`, `password`, `creation_date`)
     // VALUES ('toto', 'titi', 'tata', 'tutu', 'dsfsadfasdf', '2010-02-06 19:30:13')");
