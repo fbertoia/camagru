@@ -8,6 +8,7 @@ try {
 	$dbh->exec("CREATE DATABASE IF not EXISTS `$dbname`");
 	echo "Database $dbname created."."<br>";
 	$dbh = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
+	$dbh->setAttribute(PDO::ATTR_EMULATE_PREPARES, 1);
 	$dbh->exec(
 		"CREATE TABLE IF not EXISTS users (
 			`id` INT PRIMARY KEY AUTO_INCREMENT NOT NULL,

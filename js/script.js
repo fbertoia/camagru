@@ -40,7 +40,7 @@ $(document).ready(function() {
 			data:{request: "login", login, password},
 			success: function(data)
 			{
-				if (data === "SUCCESS")
+				if (data === login)
 				{
 					var url = '/main_page.php';
 					var form = $('<form action="' + url + '" method="post">' +

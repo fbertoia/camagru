@@ -8,7 +8,6 @@
 	}
 	fclose($myfile);
 ?>
-
 <html>
 	<head>
 	</head>
