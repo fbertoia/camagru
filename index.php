@@ -24,7 +24,7 @@ if (isset($_SESSION['logged']) && $_SESSION['logged'] === TRUE)
 	<div class="modal-display">
 		<form class="modal-display-box modal-connect" id="connect" action="#" method="post">
 			<div class="modal-group ">
-			    <input type="text" class="login-connect" class="name-connect" required="required" value="yes"/>
+			    <input type="text" class="login-connect" class="name-connect" required="required" value="frederic"/>
 			    <label for="login">Identifiant</label>
             </div>
             <div class="modal-group">
@@ -36,15 +36,15 @@ if (isset($_SESSION['logged']) && $_SESSION['logged'] === TRUE)
 		</form>
 		<form class="modal-display-box modal-register" action="#" target="_blank" method="post">
 				<div class="modal-group">
-				    <input type="text" class="name-register" required="required" value="yes"/>
+				    <input type="text" class="name-register" required="required" value="frederic"/>
 				    <label for="login">Nom</label>
 	            </div>
 	            <div class="modal-group">
-				    <input type="text" class="surname-register" required="required" value="yes"/>
+				    <input type="text" class="surname-register" required="required" value="frederic"/>
 				    <label for="password">Prenom</label>
 	            </div>
 				<div class="modal-group">
-					<input type="text" class="login-register" required="required" value="yes"/>
+					<input type="text" class="login-register" required="required" value="frederic"/>
 					<label for="password">Identifiant</label>
 				</div>
 	            <div class="modal-group">

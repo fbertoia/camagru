@@ -2,13 +2,13 @@
 
 DEFINE('SERVER_NAME', 'localhost');
 DEFINE('USER', 'root');
-DEFINE('PASSWORD', '000000');
+DEFINE('PASSWORD', 'root');
 DEFINE('DB_NAME', 'db_camagru');
 
 $db;
 $servername = "localhost";
 $username = "root";
-$password = "000000";
+$password = "root";
 $dbname = "db_camagru";
 
 ?>

@@ -15,7 +15,7 @@ function randomString($len = 10) {
 
 function addNewUserToDb($dbh, $name, $surname, $login, $email, $password, $salt)
 {
-	printf("name = ". $name . "  ". 'login = '. $login);
+	// printf("name = ". $name . "  ". 'login = '. $login);
 	$stmt = $dbh->prepare("SELECT * FROM `users` WHERE `email` = ? OR `login` = ?");
 	$stmt->execute(["$email", "$login"]);
 	while ($row = $stmt->fetch(PDO::FETCH_OBJ))

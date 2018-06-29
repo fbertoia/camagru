@@ -25,5 +25,20 @@ catch(Exception $e) {
 	return ("ERROR SQL");
 }
 header("Location: ../main_page.php");
-echo "toto";
 ?>
+
+<html>
+	<head>
+	</head>
+	<body>
+		<form action="/main_page.php" method="get">
+	</body>
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+<script>
+	// window.location = "/main_page.php";
+	// $(document).ready(function() {
+	// 	var form = $('form');
+	// 	form.submit();
+	// });
+</script>
+</html>
